@@ -1,0 +1,16 @@
+{
+  "name": "youguoda-profile",
+  "private": true,
+  "type": "module",
+  "description": "Profile-as-code: renders the youguoda GitHub profile README and its SVG panels.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs --preview"
+  },
+  "dependencies": {
+    "opentype.js": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,47 @@
+# Rebuilds the profile panels with fresh GitHub data once a day, and whenever
+# the design or config changes. Commits only when an asset actually changed.
+name: Profile
+
+on:
+  schedule:
+    - cron: '17 0 * * *' # 00:17 UTC daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - profile.config.mjs
+      - scripts/**
+      - package.json
+      - package-lock.json
+      - .github/workflows/profile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          # Optional PROFILE_TOKEN (a PAT) adds private contribution *counts*;
+          # repositories are always filtered to public ones.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets README.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore(profile): sync telemetry'
+          git push
