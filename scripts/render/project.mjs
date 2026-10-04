@@ -249,6 +249,32 @@ const MOTIFS = {
     return out.join('');
   },
 
+  // env-setup: the LLM test-dev server — serving, evaluation and cache units.
+  rack(doc, t, a, B) {
+    doc.css(
+      '.led{animation:led 1.6s steps(1) infinite}@keyframes led{50%{opacity:.3}}' +
+        '.eq{transform-box:fill-box;transform-origin:bottom;animation:eq .9s ease-in-out infinite alternate}@keyframes eq{from{transform:scaleY(.25)}}',
+    );
+    const out = [el('rect', { x: B.x, y: B.y + 2, width: B.w, height: 100, rx: 9, fill: t.lens.rim, stroke: t.line2 })];
+    [['VLLM SERVE'], ['LM-EVAL', 'HARNESS'], ['HF CACHE', '100 GB QUOTA']].forEach(([name, meta], i) => {
+      const y = B.y + 10 + i * 30;
+      out.push(el('rect', { x: B.x + 8, y, width: B.w - 16, height: 24, rx: 5, fill: '#161927', stroke: '#fff', 'stroke-opacity': 0.07 }));
+      out.push(el('circle', { cx: B.x + 18, cy: y + 12, r: 2.6, fill: '#4ADE80', class: 'led', style: `animation-delay:${-i * 0.55}s` }));
+      out.push(doc.text(name, { x: B.x + 27, y: y + 15, ...mono(7, '#fff', { opacity: 0.85, stack: 'monoMd' }) }));
+      if (meta) {
+        out.push(doc.text(meta, { x: B.x + B.w - 15, y: y + 15, ...mono(6.5, '#fff', { opacity: 0.45, anchor: 'end', tracking: 0.06 }) }));
+        return;
+      }
+      // Live request traffic on the serving unit.
+      for (let k = 0; k < 6; k++) {
+        out.push(el('rect', { x: B.x + B.w - 46 + k * 5, y: y + 6, width: 3, height: 12, rx: 1, fill: a, class: 'eq', style: `animation-delay:${f(-k * 0.17)}s` }));
+      }
+    });
+    out.push(icon(doc, 'clock', { x: B.x + 1, y: B.y + 109, size: 11, color: a, sw: 1.4 }));
+    out.push(doc.text('RESTORE IN 10 MIN', { x: B.x + 16, y: B.y + 118, ...mono(7, t.ink3, { tracking: 0.08 }) }));
+    return out.join('');
+  },
+
   // vLLM Lab: continuous batching lanes over a paged KV cache.
   batching(doc, t, a, B) {
     const out = [];

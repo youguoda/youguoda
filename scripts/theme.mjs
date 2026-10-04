@@ -50,6 +50,7 @@ export const THEMES = {
     violet: '#8B5CF6',
     violet2: '#A78BFA',
     cyan: '#22D3EE',
+    blue: '#60A5FA',
     signal: '#4ADE80',
     rec: '#FF453A',
     amber: '#FBBF24',
@@ -90,6 +91,7 @@ export const THEMES = {
     violet: '#6D28D9',
     violet2: '#7C3AED',
     cyan: '#0891B2',
+    blue: '#2563EB',
     signal: '#16A34A',
     rec: '#E5484D',
     amber: '#D97706',
@@ -289,7 +291,7 @@ export const languageSlots = (config, data) =>
   (config.languages?.length ? config.languages : data.languages.map((l) => l.name)).slice(0, 4);
 export const langColor = (t, slots, name) => (slots.includes(name) ? t.series[slots.indexOf(name)] : t.other);
 
-export const ACCENTS = { 'MACHINE VISION': 'cyan', 'LLM INFERENCE': 'amber', 'AGENTIC TOOLING': 'violet2', 'DESKTOP CRAFT': 'rose' };
+export const ACCENTS = { 'LLM INFERENCE': 'amber', 'GPU INFRA': 'blue', 'MACHINE VISION': 'cyan', 'AGENTIC TOOLING': 'violet2', 'DESKTOP CRAFT': 'rose' };
 
 // Splits text into rich() parts, flagging each emphasised word for the gradient.
 export function emphasize(text, words = []) {

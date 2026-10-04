@@ -5,51 +5,56 @@ export default {
   login: 'youguoda',
   wordmark: 'AGOODA',
   handle: '@youguoda',
-  // Class label on the hero's detection box, YOLO-style.
-  detection: 'engineer',
-  tagline: '让机器看见，让智能落地',
-  emphasis: ['看见', '落地'],
-  taglineEn: 'Making machines see — and intelligence ship.',
-  disciplines: ['MACHINE VISION', 'LLM INFERENCE', 'AGENTIC TOOLING', 'DESKTOP CRAFT'],
+  // Label chip on the hero's target frame.
+  badge: 'LLM INFERENCE · TEST ENGINEER',
+  tagline: '为国产算力，验证每一个 Token',
+  emphasis: ['国产算力', '每一个 Token'],
+  taglineEn: 'Validating every token on domestic GPGPU.',
+  disciplines: ['LLM INFERENCE', 'GPGPU VALIDATION', 'BENCHMARKING', 'TEST AUTOMATION'],
+  location: { city: 'SHANGHAI', cityCn: '上海', tz: 'UTC+8' },
+
+  role: {
+    title: '模型应用测试开发工程师',
+    titleEn: 'Model Application Test Engineer',
+    tags: ['LLM INFERENCE', 'DOMESTIC GPGPU', 'TEST & DEV'],
+    org: '国产通用 GPU 芯片 · AI 算力解决方案',
+    domain: '大模型推理 × 国产 GPGPU',
+  },
 
   focus: [
-    { icon: 'scan', title: 'Machine Vision', detail: '工业相机 · ROI · 视觉检测' },
-    { icon: 'bolt', title: 'LLM Inference', detail: 'vLLM · SGLang · PagedAttention' },
-    { icon: 'sparkle', title: 'Agentic Tooling', detail: 'Claude Code · Codex · Skills' },
-    { icon: 'monitor', title: 'Desktop Craft', detail: 'WPF · .NET · Qt · Windows 11' },
+    { icon: 'checklist', title: 'Inference Validation', detail: '功能 · 精度 · 稳定性' },
+    { icon: 'gauge', title: 'Benchmarking', detail: '吞吐 · TTFT · TPOT · 并发' },
+    { icon: 'layers', title: 'Frameworks', detail: 'vLLM · SGLang · OpenAI API' },
+    { icon: 'terminal', title: 'Test Automation', detail: '自动化回归 · CI · 报告' },
   ],
-
-  rig: [
-    { icon: 'chip', key: 'GPU', value: 'RTX 3060 · 12 GB' },
-    { icon: 'layers', key: 'OS', value: 'Windows 11 + WSL2' },
-    { icon: 'terminal', key: 'AGENTS', value: 'Claude Code · Codex' },
-  ],
-
-  philosophy: {
-    quote: '方法论不该做成视图，该做成约束。',
-    emphasis: ['约束'],
-    en: 'Methodology shouldn’t be a view — it should be a constraint.',
-    source: 'ProfessionalStation',
-  },
 
   // [icon, label, brand colour]. Icons: `ui:*` are built in, `si:*` Simple Icons, `devicon:*` Devicon.
   stack: [
-    { layer: 'INTELLIGENCE', items: [['si:pytorch', 'PyTorch', '#EE4C2C'], ['ui:vllm', 'vLLM', '#30A2FF'], ['si:huggingface', 'Hugging Face', '#FFD21E'], ['si:nvidia', 'CUDA', '#76B900']] },
-    { layer: 'VISION', items: [['si:opencv', 'OpenCV', '#5C3EE8'], ['si:qt', 'Qt · PyQt', '#41CD52'], ['ui:camera', 'Industrial Cameras', '#22D3EE'], ['ui:aperture', 'Sony Camera SDK', '#A78BFA']] },
-    { layer: 'AGENTS', items: [['si:claude', 'Claude Code', '#D97757'], ['ui:terminal', 'Codex', '#10A37F'], ['si:cursor', 'Cursor', '#B4B9C7'], ['si:alibabacloud', '百炼 Bailian', '#FF6A00']] },
-    { layer: 'LANGUAGES', items: [['si:python', 'Python', '#3776AB'], ['devicon:csharp/csharp-plain', 'C#', '#9B4F96'], ['si:cplusplus', 'C++', '#00599C'], ['si:typescript', 'TypeScript', '#3178C6']] },
-    { layer: 'PLATFORM', items: [['si:dotnet', '.NET', '#512BD4'], ['ui:windows', 'Windows', '#0078D4'], ['si:linux', 'Linux · WSL2', '#FCC624'], ['si:docker', 'Docker', '#2496ED']] },
+    { layer: 'INFERENCE', items: [['ui:vllm', 'vLLM', '#30A2FF'], ['ui:sglang', 'SGLang', '#A78BFA'], ['si:huggingface', 'Hugging Face', '#FFD21E'], ['si:pytorch', 'PyTorch', '#EE4C2C']] },
+    { layer: 'COMPUTE', items: [['ui:chip', '国产 GPGPU', '#22D3EE'], ['si:nvidia', 'CUDA', '#76B900'], ['si:docker', 'Docker', '#2496ED'], ['si:linux', 'Linux · WSL2', '#FCC624']] },
+    { layer: 'VALIDATION', items: [['ui:flask', 'lm-eval-harness', '#F472B6'], ['ui:gauge', 'Benchmarking', '#FBBF24'], ['ui:checklist', 'Regression', '#4ADE80'], ['si:githubactions', 'GitHub Actions', '#2088FF']] },
+    { layer: 'LANGUAGES', items: [['si:python', 'Python', '#3776AB'], ['si:cplusplus', 'C++', '#00599C'], ['si:gnubash', 'Shell', '#4EAA25'], ['devicon:csharp/csharp-plain', 'C#', '#9B4F96']] },
+    { layer: 'AI TOOLING', items: [['si:claude', 'Claude Code', '#D97757'], ['ui:terminal', 'Codex', '#10A37F'], ['si:cursor', 'Cursor', '#B4B9C7'], ['si:alibabacloud', '百炼 Bailian', '#FF6A00']] },
+    { layer: 'VISION · PREV', items: [['si:opencv', 'OpenCV', '#5C3EE8'], ['si:qt', 'Qt · PyQt', '#41CD52'], ['ui:camera', 'Industrial Cameras', '#22D3EE'], ['ui:scan', 'Segmentation', '#A78BFA']] },
   ],
 
   // Rendered as clickable cards, two per row. `motif` picks the card illustration.
   projects: [
     {
-      repo: 'shiyu',
-      title: '拾语 Shiyu',
-      kind: 'DESKTOP CRAFT',
-      motif: 'clipboard',
-      desc: 'Windows 11 托盘常驻的剪贴板历史与翻译工具——安静记下你复制过的一切，需要时把外语变成中文。',
-      tags: ['C#', 'WPF', '.NET 9', 'SQLite'],
+      repo: 'vllm_learn',
+      title: 'vLLM Lab',
+      kind: 'LLM INFERENCE',
+      motif: 'batching',
+      desc: 'vLLM + SGLang 推理实验场：关键参数基准、连续批处理压测（RPS / TTFT / 延迟）与 PagedAttention 论文笔记。',
+      tags: ['Python', 'vLLM', 'SGLang', 'CUDA'],
+    },
+    {
+      repo: 'env-setup',
+      title: 'env-setup',
+      kind: 'GPU INFRA',
+      motif: 'rack',
+      desc: '大模型测试开发的环境基建：GPU 服务器上的 Docker 化 vLLM 推理服务、lm-eval-harness 评测与 10 分钟一键还原。',
+      tags: ['Shell', 'Docker', 'vLLM', 'lm-eval'],
     },
     {
       repo: 'SkillsHub',
@@ -60,12 +65,12 @@ export default {
       tags: ['JavaScript', 'WSL2', 'SHA-256 Sync'],
     },
     {
-      repo: 'SonyPro',
-      title: 'SonyPro',
-      kind: 'VISION × AGENTS',
-      motif: 'shutter',
-      desc: '索尼 ILCE-6700 遥控拍摄 + Agent 技能修图：照片直存电脑，自动提交任务，产物落盘对比查看。',
-      tags: ['C#', '.NET 10', 'Camera SDK', 'Agents'],
+      repo: 'shiyu',
+      title: '拾语 Shiyu',
+      kind: 'DESKTOP CRAFT',
+      motif: 'clipboard',
+      desc: 'Windows 11 托盘常驻的剪贴板历史与翻译工具——安静记下你复制过的一切，需要时把外语变成中文。',
+      tags: ['C#', 'WPF', '.NET 9', 'SQLite'],
     },
     {
       repo: 'AllCamera',
@@ -82,14 +87,6 @@ export default {
       motif: 'roi',
       desc: '面向机器视觉与工业检测的 Qt 图像 ROI 绘制工具：旋转矩形、同心圆、多边形等十余种区域。',
       tags: ['C++', 'Qt', 'ROI'],
-    },
-    {
-      repo: 'vllm_learn',
-      title: 'vLLM Lab',
-      kind: 'LLM INFERENCE',
-      motif: 'batching',
-      desc: 'vLLM + SGLang 推理框架实验场：连续批处理基准、关键参数探索与 PagedAttention 论文笔记。',
-      tags: ['Python', 'vLLM', 'SGLang', 'CUDA'],
     },
   ],
 

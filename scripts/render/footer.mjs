@@ -20,7 +20,7 @@ export function footer(ts, t, { config, data }) {
   const word = doc.ts.path(config.wordmark, { x: 26, y: 42, size: 14, stack: 'display', tracking: 0.28 });
   const cap = doc.ts.capHeight('display', 14);
   out.push(el('path', { d: word.d, fill: `url(#${linear(doc, t.chrome, { x1: 0, y1: f(42 - cap), x2: 0, y2: 42, units: 'userSpaceOnUse' })})` }));
-  out.push(doc.text(`© ${data.syncedAt.slice(0, 4)}  ·  ${config.handle}`, { x: 26, y: 62, size: 9.5, stack: 'mono', fill: t.ink3, tracking: 0.1 }));
+  out.push(doc.text(`© ${data.syncedAt.slice(0, 4)}  ·  ${config.handle}  ·  ${config.location.city}`, { x: 26, y: 62, size: 9.5, stack: 'mono', fill: t.ink3, tracking: 0.1 }));
 
   // Carrier line with a heartbeat blip; a pulse of light runs along it.
   const x0 = 250;
