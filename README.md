@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-light.svg"><img alt="Identity — Machine Vision · LLM Inference · Agentic Tooling · Desktop Craft — now building shiyu" src="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-light.svg"><img alt="Identity — Machine Vision · LLM Inference · Agentic Tooling · Desktop Craft — now building GameControllerCoding" src="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/identity-dark.svg" width="100%"></picture>
 </p>
 
 <p align="center">
@@ -45,11 +45,11 @@
 | Commits · past 12 months | 499 |
 | Peak day · 2026-10-02 | 124 |
 | Last 30 days | 387 (+351 vs prior 30) |
-| C# | 40.0% |
-| Python | 15.5% |
-| TypeScript | 14.8% |
-| HTML | 13.6% |
-| Other (12 languages) | 16.2% |
+| C# | 39.5% |
+| Python | 16.4% |
+| TypeScript | 14.6% |
+| HTML | 13.4% |
+| Other (12 languages) | 16.0% |
 
 <sub>Synced 2026-10-04 UTC · public activity only</sub>
 </details>
