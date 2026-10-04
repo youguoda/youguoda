@@ -11,7 +11,7 @@ const BASE_CHARS =
   ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~·—–…“”‘’×';
 const WIDE = /[⺀-鿿豈-﫿＀-￯　-〿]/;
 // Characters that must not start a line in CJK typesetting.
-const NO_LINE_START = /[，。、；：！？）》」』】,.;:!?)\]]/;
+const NO_LINE_START = /^[，。、；：！？）》」』】,.;:!?)\]]/;
 
 // Serialises opentype.js path commands as compact relative path data. (Its own
 // toPathData() drops the separator when a negative coordinate rounds to 0,

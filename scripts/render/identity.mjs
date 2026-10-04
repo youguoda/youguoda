@@ -120,7 +120,7 @@ function nowBuilding(doc, t, config, data, b) {
   out.push(label(doc, t, 'NOW BUILDING', b.x + 32, b.y + 27));
   out.push(label(doc, t, repo.pushedAt.slice(0, 10), b.x + b.w - 16, b.y + 27, { fill: t.ink4, anchor: 'end', tracking: 0.08 }));
   out.push(doc.text(meta?.title ?? repo.name, { x: b.x + 16, y: b.y + 56, size: 17, stack: 'sansSb', fill: t.ink }));
-  const desc = meta?.desc ?? repo.description ?? `${repo.language ?? 'Code'} · github.com/${data.login}/${repo.name}`;
+  const desc = meta?.desc ?? repo.description ?? `${repo.language ?? 'Code'} · ${data.login}/${repo.name}`;
   doc.ts.wrap(desc, { maxWidth: b.w - 32, maxLines: 2, size: 11.5, stack: 'sans' }).forEach((line, i) => {
     out.push(doc.text(line, { x: b.x + 16, y: b.y + 78 + i * 17, size: 11.5, stack: 'sans', fill: t.ink3 }));
   });
