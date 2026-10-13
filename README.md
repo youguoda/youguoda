@@ -51,7 +51,7 @@
 | HTML | 12.7% |
 | Other (13 languages) | 16.5% |
 
-<sub>Synced 2026-10-12 UTC · public activity only</sub>
+<sub>Synced 2026-10-13 UTC · public activity only</sub>
 </details>
 </div>
 
