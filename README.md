@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-light.svg"><img alt="Telemetry — 592 contributions in the past 12 months, 447 in the last 30 days" src="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-light.svg"><img alt="Telemetry — 618 contributions in the past 12 months, 473 in the last 30 days" src="https://raw.githubusercontent.com/youguoda/youguoda/main/assets/telemetry-dark.svg" width="100%"></picture>
 </p>
 
 <div align="center">
@@ -41,17 +41,17 @@
 
 | Metric | Value |
 | :-- | --: |
-| Contributions · past 12 months | 592 |
-| Commits · past 12 months | 577 |
+| Contributions · past 12 months | 618 |
+| Commits · past 12 months | 603 |
 | Peak day · 2026-10-02 | 124 |
-| Last 30 days | 447 (+393 vs prior 30) |
-| C# | 42.5% |
-| Python | 15.1% |
-| TypeScript | 13.4% |
-| HTML | 12.3% |
-| Other (13 languages) | 16.6% |
+| Last 30 days | 473 (+419 vs prior 30) |
+| C# | 44.8% |
+| Python | 14.4% |
+| TypeScript | 12.8% |
+| HTML | 11.8% |
+| Other (13 languages) | 16.2% |
 
-<sub>Synced 2026-10-16 UTC · public activity only</sub>
+<sub>Synced 2026-10-17 UTC · public activity only</sub>
 </details>
 </div>
 
